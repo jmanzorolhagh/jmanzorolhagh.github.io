@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Rowdies-Regular';
+    src: local('Rowdies-Regular'), url(./fonts/Rowdies/Rowdies-Regular.ttf) format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+  }
+
+  .App{
+      font-family: 'Rowdies-Regular';
+  }
