@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.921709f2.css",
-    "main.js": "/static/js/main.7e2617bf.js",
+    "main.css": "/static/css/main.7b240583.css",
+    "main.js": "/static/js/main.17495e45.js",
+    "static/media/Rowdies-Regular.ttf": "/static/media/Rowdies-Regular.c3e51820d6d0195a2ef9.ttf",
     "index.html": "/index.html",
-    "main.921709f2.css.map": "/static/css/main.921709f2.css.map",
-    "main.7e2617bf.js.map": "/static/js/main.7e2617bf.js.map"
+    "main.7b240583.css.map": "/static/css/main.7b240583.css.map",
+    "main.17495e45.js.map": "/static/js/main.17495e45.js.map"
   },
   "entrypoints": [
-    "static/css/main.921709f2.css",
-    "static/js/main.7e2617bf.js"
+    "static/css/main.7b240583.css",
+    "static/js/main.17495e45.js"
   ]
 }
