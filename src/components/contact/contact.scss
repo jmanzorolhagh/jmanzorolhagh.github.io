@@ -1,0 +1,70 @@
+.Contact{
+    background-color: black;
+    color: black;
+    display: flex;
+    align-items: center;
+    .left {
+      flex: 1;
+      overflow: hidden;
+  
+      img {
+        height: 100%;
+      }
+    }
+    .right{
+      flex: 1;
+      flex-direction: column;
+      h1{
+        color: coral;
+        font-weight: 400;
+        transform: rotate(90deg);
+        float: right;
+        font-size: 50px;
+        margin-top: 50px;
+      }
+      .container{
+          width: 70%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          .item{
+              width: 300px;
+              height: 150px;
+              border-radius: 20px;
+              margin: 20px 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              transition: all .5s ease;
+              cursor: pointer;
+          
+          h3 {
+            position: absolute;
+              font-weight: 300;
+              font-size: 40px;
+              margin: 20px;
+            }
+            a{
+              z-index: 2;
+            img {
+
+              border-radius: 20px;
+              width: 300px;
+              height: 150px;
+              object-fit: cover;
+              overflow: hidden;
+            }
+            }
+            &:hover {
+              background-color: coral;
+              img {
+                opacity: 0.1;
+                z-index: 0;
+              }
+            }
+          }
+      }
+    }
+}

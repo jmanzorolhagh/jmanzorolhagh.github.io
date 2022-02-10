@@ -1,0 +1,143 @@
+.Works{
+    z-index: 1;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    h1{
+        color: coral;
+        position: absolute;
+        left: 1300px;
+        top: 100px;
+        font-weight: 400;
+        transform: rotate(90deg);
+        font-size: 50px;
+      }
+    .imageContainer{
+        position: relative;
+        filter: invert(1);
+    .imageWrap{
+        position: absolute;
+        animation-name: fade 3s;
+        
+        width: 70px;
+        height: 100px;
+        top: 220px;
+        right: -650px;
+        img{
+
+            animation: fade 2s;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .layer{
+        position: absolute;
+        animation: fade 2s;
+        //filter: invert(1);
+        width: 30px;
+        height: 30px;
+        right: -680px;
+        top: 200px;
+        input[type='image']{
+                display: block;
+                width: 100%;
+                height: 100%;
+                animation: blink 2s infinite;
+            }
+        }
+    }
+    .slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0vw;
+        transition: all 1s ease-out;
+        .container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        .item{
+            width: 700px;
+            height: 100%;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .left{
+                flex:4;
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .leftContainer{
+                    width: 90%;
+                    height: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .imgContainer{
+                        width: 40px;
+                        height: 40px;
+                        background-color: azure;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        img{
+                            width: 50px;
+                            object-fit: contain;
+                        }
+                    }
+                    a{
+                        margin-bottom: -30px;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                    h2{
+                        font-size: 30px;
+                    }
+                }
+            }
+            .right{
+                flex: 8;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                    img{
+                        width: 550px;
+                        transform: rotate(70deg);
+                    }
+                
+                }
+            }
+
+        }
+        
+    }
+    .leftArrow{
+        filter: invert(1);
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 150px;
+        cursor: pointer;
+    }
+    .rightArrow{
+        filter: invert(1);
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        right: 150px;
+        transform: rotateY(180deg);
+        cursor: pointer;
+    }
+}
