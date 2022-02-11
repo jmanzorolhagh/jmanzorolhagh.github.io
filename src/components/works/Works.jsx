@@ -36,7 +36,7 @@ export default function Works() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const handleClick = (way) => {
     way === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : data.length)
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
   };
 
@@ -89,7 +89,7 @@ export default function Works() {
       </div>
       ))}
     </motion.div>
-    <ArrowCircleLeftIcon className="rightArrow"  onClick={() => handleClick()}/>
-    <ArrowCircleLeftIcon className="leftArrow"  onClick={() => handleClick()}/>
+    <ArrowCircleLeftIcon className="rightArrow"  onClick={() => handleClick('right')}/>
+    <ArrowCircleLeftIcon className="leftArrow"  onClick={() => handleClick('left')}/>
   </div>;
 }
