@@ -42,7 +42,7 @@ export default function Intro() {
       startDelay: 1000,
       backDelay: 1000,
       backSpeed:60,
-      strings: ["diverse", "equitable", "inclusive"],
+      strings: ["new", "useful", "simple", "open"],
     });
   }, []);
   
@@ -160,11 +160,11 @@ export default function Intro() {
     </div>
     <div className="right">
       <div className="wrapper">
-      <h2>software engineer commited to implementing</h2>
-        <h3>artificial intelligence</h3>
-        <h2>and</h2>
-        <h3>non-biased techniques</h3>
-        <h2>to create a workplace that is <span ref={textRef}></span></h2> 
+      <h2>engineer interested in exploring</h2>
+        <h3>designing and repurposing software,firmware and hardware</h3>
+        <h2>as a means of</h2>
+        <h3>creating something </h3>
+        <h2>entirely <span ref={textRef}></span></h2> 
       </div>
     </div>
     </div>;

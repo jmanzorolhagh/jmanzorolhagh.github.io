@@ -5,7 +5,7 @@
     h1{
         color: coral;
         position: absolute;
-        left: 1250px;
+        left: 1330px;
         top: 150px;
         float: right;
         font-weight: 400;
@@ -33,7 +33,7 @@
             }
         }
         p{
-            color: white;
+            color: azure;
             animation-name: fade;
             margin-top: 330px;
             animation-duration: 5s;
@@ -67,7 +67,7 @@
             justify-content: center;
             a{
                 text-decoration: none;
-                color: white;
+                color: azure;
                 font-weight: 200;
             }
         }
@@ -78,9 +78,9 @@
         flex: 0.6;
         .wrapper{
             color: azure;
-            width: 100%;
+            width: 85%; 
             height: 100%;
-            padding-left: 100px;
+            padding-left: 50px;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -101,7 +101,7 @@
             }
             h3{
                 animation: fade 8s;
-                font-size: 60px;
+                font-size: 50px;
             }
         }
     }

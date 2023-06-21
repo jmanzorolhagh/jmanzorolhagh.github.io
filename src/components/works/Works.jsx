@@ -9,7 +9,23 @@ export default function Works() {
   const element = useRef(null)
   const data = [
     {
-      id:'1',
+      id: '1',
+      icon: './assets/ble.png',
+      title: 'ble & network esp32',
+      desc: 'an esp32 ble connection along with a network interface in your local browser w/ user control for non-wifi devices',
+      img: './assets/esp32.png',
+      rep: 'htttps://github.com/jmanzorolhagh'
+      },
+      {
+        id: '2',
+        icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ghidra_logo.svg/1200px-Ghidra_logo.svg.png',
+        title: 'reverse engineering',
+        desc: 'various projects decompiling and analyzing software including games and other programs',
+        img: 'https://incusdata.com/wp-content/uploads/decompile-java-code-e1653061314217.png',
+        rep: 'htttps://github.com/jmanzorolhagh'
+        },
+    {
+      id:'3',
       icon: './assets/socket3.png',
       title: 'socket video capture',
       desc: 'a low level implementation of python socket streaming to capture and relay video',
@@ -17,7 +33,7 @@ export default function Works() {
       rep: 'https://github.com/jmanzorolhagh'
     },
     {
-      id:'2',
+      id:'4',
       icon: './assets/recursive.jpg',
       title: 'recursive web automation',
       desc: 'a recursive depth search of a web page for embedded video links + automated watchtime',
@@ -25,7 +41,7 @@ export default function Works() {
       rep: 'https://github.com/jmanzorolhagh'
     },
     {
-    id: '3',
+    id: '5',
     icon: './assets/pi-icon.png',
     title: 'network pi streaming',
     desc: 'self hosted arduino based video capture system based on python sockets via local network',

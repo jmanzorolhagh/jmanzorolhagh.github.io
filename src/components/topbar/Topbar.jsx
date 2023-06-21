@@ -8,7 +8,7 @@ export default function Topbar({open, setOpen}) {
     <div className="wrapper">
       <div className="left">
         <motion.a href="#intro" className="logo" initial={{x: -100}} animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 100 }}>jminc</motion.a>
+          transition={{ type: "spring", stiffness: 100 }}>jrm</motion.a>
         <div className="itemContainer">
           <Email className="icon"/>
             <span>joshuamanzorolhagh@gmail.com</span>
