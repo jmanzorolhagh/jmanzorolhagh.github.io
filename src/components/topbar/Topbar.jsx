@@ -15,7 +15,7 @@ export default function Topbar({open, setOpen}) {
         </div>
         <div className="itemContainer">
           <BusinessCenterOutlined className="icon"/>
-          <span> github.com/joshuamanzorolhagh </span>
+          <span> github.com/jmanzorolhagh </span>
         </div> 
       </div>
       <div className="right">
