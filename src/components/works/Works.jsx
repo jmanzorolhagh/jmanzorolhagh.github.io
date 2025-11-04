@@ -71,6 +71,20 @@ export default function Works() {
       rep: null, 
       repoText: "Private" 
     },
+    {
+      id: "5",
+      title: "Tier1Fitness (NYIT Course Project)",
+      desc: "A social fitness community platform, app and designed to gamify exercise and foster community-driven accountability.",
+      points: [
+        "Serving as Infrastructure Lead on the full-stack team, developing the app in React Native.",
+        "Designing a social feed for users to share progress and join custom fitness challenges.",
+        "System built on a JavaScript backend and a relational SQL database."
+      ],
+      tech: "React Native, SQL, JavaScript, User-Centered Design",
+      img: "./assets/fitness.webp", // Use a screenshot from your Figma design!
+      rep: null, 
+      repoText: "Academic Course Project" 
+    },
   ];
 
   const paginate = (newDirection) => {
