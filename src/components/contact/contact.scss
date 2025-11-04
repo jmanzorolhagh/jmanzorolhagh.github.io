@@ -1,71 +1,61 @@
-.Contact{
-    background-color: black;
-    color: black;
-    display: flex;
-    align-items: center;
-    .left {
-      flex: 1;
-      overflow: hidden;
-  
-      img {
-        height: 100%;
-      }
-    }
-    .right{
-      flex: 1;
-      flex-direction: column;
-      h1{
-        color: coral;
-        font-weight: 400;
-        transform: rotate(90deg);
-        float: right;
-        font-size: 50px;
-        margin-top: 50px;
-        left: 1350px
-      }
-      .container{
-          width: 70%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          .item{
-              width: 300px;
-              height: 150px;
-              border-radius: 20px;
-              margin: 20px 50px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: relative;
-              transition: all .5s ease;
-              cursor: pointer;
-          
-          h3 {
-            position: absolute;
-              font-weight: 300;
-              font-size: 40px;
-              margin: 20px;
-            }
-            a{
-              z-index: 2;
-            img {
+@import "../../_variables";
 
-              border-radius: 20px;
-              width: 300px;
-              height: 150px;
-              object-fit: cover;
-              overflow: hidden;
-            }
-            }
-            &:hover {
-              background-color: coral;
-              img {
-                opacity: 0.1;
-                z-index: 0;
-              }
-            }
-          }
+.contact {
+  background-color: $columbia-blue-dark;
+  color: $columbia-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .container {
+    width: 60%;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-family: $font-serif;
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-family: $font-sans;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .contact-link {
+      font-family: $font-sans;
+      font-size: 20px;
+      font-weight: 700;
+      color: $columbia-white;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $columbia-blue-light;
+        transition: width 0.3s;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:hover::after {
+        width: 100%;
       }
     }
+  }
 }
