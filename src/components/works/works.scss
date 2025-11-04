@@ -1,143 +1,208 @@
-.Works{
-    z-index: 1;
-    background-color: black;
+@import "../../_variables";
+
+.Works {
+  background-color: $columbia-blue-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; 
+  padding: 40px 0;
+
+  .header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    h2 {
+      font-family: $font-serif;
+      font-size: 42px;
+      color: $columbia-blue-dark;
+      border-bottom: 3px solid $columbia-blue-dark;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+  }
+
+  .slider-container {
+    width: 80%;
+    max-width: 1000px;
+    height: 60%;
+    max-height: 500px;
+    position: relative; 
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
+    align-items: center;
+  }
+
+  .slide-item {
+    background-color: $columbia-white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    h1{
-        color: coral;
-        position: absolute;
-        left: 1350px;
-        top: 100px;
-        font-weight: 400;
-        transform: rotate(90deg);
-        font-size: 50px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    /* ↓↓↓ THIS IS THE CHANGED SECTION ↓↓↓
+    */
+    .item-image-container {
+      flex: 1;
+      min-width: 300px;
+      max-width: 350px;
+      background: #f0f0f0; // Fallback for broken images
+
+      .item-image {
+        width: 100%;
+        height: 100%;
+        
+        // --- THIS IS THE FIX ---
+        // 'contain' will show the whole image, letterboxed
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
       }
-    .imageContainer{
-        position: relative;
-        filter: invert(1);
-    .imageWrap{
-        position: absolute;
-        animation-name: fade 3s;
-        
-        width: 70px;
-        height: 100px;
-        top: 220px;
-        right: -650px;
-        img{
+      
+      // We can still have the zoom effect,
+      // it just uses 'cover' instead
+      &.zoom-image .item-image {
+        background-size: cover;
+      }
+    }
+    /* ↑↑↑ END OF CHANGED SECTION ↑↑↑
+    */
 
-            animation: fade 2s;
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-    }
-    .layer{
-        position: absolute;
-        animation: fade 2s;
-        //filter: invert(1);
-        width: 30px;
-        height: 30px;
-        right: -680px;
-        top: 200px;
-        input[type='image']{
-                display: block;
-                width: 100%;
-                height: 100%;
-                animation: blink 2s infinite;
-            }
-        }
-    }
-    .slider{
-        height: 350px;
-        display: flex;
-        position: absolute;
-        left: 0vw;
-        transition: all 1s ease-out;
-        .container{
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        .item{
-            width: 700px;
-            height: 100%;
-            background-color: white;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .left{
-                flex:4;
-                height: 80%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .leftContainer{
-                    width: 90%;
-                    height: 80%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    .imgContainer{
-                        width: 40px;
-                        height: 40px;
-                        background-color: azure;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 50%;
-                        overflow: hidden;
-                        img{
-                            width: 50px;
-                            object-fit: contain;
-                        }
-                    }
-                    a{
-                        margin-bottom: -30px;
-                        text-decoration: underline;
-                        cursor: pointer;
-                    }
-                    h2{
-                        font-size: 30px;
-                    }
-                }
-            }
-            .right{
-                flex: 8;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-                    img{
-                        width: 550px;
-                        transform: rotate(70deg);
-                    }
-                
-                }
-            }
+    .item-content {
+      flex: 2;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
 
+      h3 {
+        font-family: $font-serif;
+        font-size: 24px;
+        color: $columbia-blue-dark;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        list-style-position: inside;
+        padding-left: 0;
+        margin: 0 0 15px 0;
+      }
+
+      li {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+      }
+
+      .tech-stack {
+        font-family: $font-sans;
+        font-size: 14px;
+        font-weight: 700;
+        color: $columbia-blue-dark;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      
+      .repo-link-container {
+        margin-top: auto;
+        padding-top: 10px;
+
+        a {
+          text-decoration: none;
+          color: $columbia-blue-accent;
+          font-weight: 700;
+          &:hover {
+            text-decoration: underline;
+          }
         }
-        
+
+        .repo-private {
+          font-family: $font-sans;
+          font-size: 14px;
+          font-weight: 700;
+          color: #777;
+          font-style: italic;
+        }
+      }
     }
-    .leftArrow{
-        filter: invert(1);
-        height: 100px;
-        width: 100px;
-        position: absolute;
-        left: 150px;
-        cursor: pointer;
+  }
+
+  // Styles for the navigation arrows
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $columbia-blue-dark;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+
+    .MuiSvgIcon-root {
+      font-size: 50px;
     }
-    .rightArrow{
-        filter: invert(1);
-        height: 100px;
-        width: 100px;
-        position: absolute;
-        right: 150px;
-        transform: rotateY(180deg);
-        cursor: pointer;
+    
+    &:hover {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
     }
+
+    &.prev {
+      left: 10px;
+    }
+    &.next {
+      right: 10px;
+    }
+  }
+
+  // Styles for the pagination dots
+  .pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $columbia-blue-medium;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.active {
+        background: $columbia-blue-dark;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  // Responsive: on smaller screens, hide the image
+  @media (max-width: 800px) {
+    .slide-item {
+      .item-image-container {
+        display: none; // Hide image on small screens
+      }
+      .item-content {
+        padding: 25px;
+      }
+    }
+    .nav-arrow {
+      .MuiSvgIcon-root {
+        font-size: 40px;
+      }
+    }
+  }
 }
