@@ -1,37 +1,48 @@
+@import "../../_variables";
+
 .menu{
     opacity: 0;
     width: 100vw;
     height: 100vh;
     backdrop-filter: blur(6px);
+    background-color: rgba(29, 79, 145, 0.9); // Dark blue overlay
     position:fixed;
-    z-index: 0;
+    top: 0;
+    left: -100vw; // Start off-screen
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity .5s linear;
+    transition: opacity 0.4s ease, left 0s 0.4s linear;
     
     ul{
+        padding: 0;
+        margin: 0;
         li{
             font-size: 40px;
             margin: 30px;
             list-style: none;
+            text-align: center;
             a{
                 text-decoration: none;
-                color: coral;
+                color: $columbia-white;
+                font-family: $font-serif;
+                font-weight: 700;
+                transition: all 0.3s ease;
             }
             &:hover {
-                font-weight: 900;
-                font-size: 50px;
-        }
-        
+                a {
+                    color: $columbia-blue-light;
+                    letter-spacing: 1px;
+                }
+            }
         }
     }
     
-      
-      &.active{
-        z-index: 2;
-        transition: opacity .5s linear;
+    &.active{
+        left: 0; // Bring on-screen
         opacity: 1;
-      }
-} 
+        transition: opacity 0.4s ease;
+    }
+}
