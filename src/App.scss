@@ -1,8 +1,9 @@
 @import 'variables';
 
-.app {
-  height: 100vh;
-  background-color: $columbia-white; 
+.app{
+    height: 100vh;
+    background-color: $columbia-white;
+
     .sections{
         width: 100%;
         height: calc(100vh - 70px);
@@ -21,4 +22,39 @@
             scroll-snap-align: start;
         }
     }
+}
+
+// Global Button Styles
+.btn {
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+
+  &.btn-primary {
+    background-color: $columbia-blue-accent;
+    color: $columbia-white;
+    border: 2px solid $columbia-blue-accent;
+
+    &:hover {
+      background-color: $columbia-blue-dark;
+      border-color: $columbia-blue-dark;
+    }
+  }
+
+  &.btn-outline {
+    background-color: $columbia-white;
+    color: $columbia-blue-dark;
+    border: 2px solid $columbia-blue-dark;
+
+    &:hover {
+      background-color: $columbia-blue-dark;
+      color: $columbia-white;
+    }
+  }
 }
