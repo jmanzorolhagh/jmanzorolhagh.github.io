@@ -1,0 +1,42 @@
+@import "../../_variables";
+
+.skills {
+  background-color: $columbia-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    width: 70%;
+    max-width: 900px;
+    text-align: left;
+  }
+
+  h2 {
+    font-family: $font-serif;
+    font-size: 42px;
+    color: $columbia-blue-dark;
+    margin-bottom: 40px;
+    border-bottom: 3px solid $columbia-blue-light;
+    padding-bottom: 10px;
+  }
+
+  .skills-group {
+    margin-bottom: 30px;
+
+    h3 {
+      font-family: $font-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: $columbia-blue-dark;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: $font-sans;
+      font-size: 18px;
+      line-height: 1.7;
+      color: $columbia-text-dark;
+    }
+  }
+}
