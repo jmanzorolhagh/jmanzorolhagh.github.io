@@ -14,14 +14,6 @@ export default function Contact() {
             joshuamanzorolhagh@gmail.com
           </a>
           <a 
-            href="https://www.linkedin.com/in/joshua-manzorolhagh" // <-- CONFIRM THIS LINK
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="contact-link"
-          >
-            LinkedIn
-          </a>
-          <a 
             href="https://github.com/jmanzorolhagh" 
             target="_blank" 
             rel="noopener noreferrer" 
