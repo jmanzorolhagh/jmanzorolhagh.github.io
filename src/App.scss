@@ -1,6 +1,8 @@
-.app{
-    height: 100vh;
+@import 'variables';
 
+.app {
+  height: 100vh;
+  background-color: $columbia-white; 
     .sections{
         width: 100%;
         height: calc(100vh - 70px);
