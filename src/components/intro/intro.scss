@@ -61,3 +61,41 @@
     transform: translateY(0);
   }
 }
+
+// --- THIS MEDIA QUERY IS UPDATED ---
+@media (max-width: 768px) {
+    .intro {
+        .wrapper {
+            width: 90%; 
+
+            h1 {
+                font-size: 32px; 
+            }
+            h3 {
+                font-size: 22px; 
+            }
+            p {
+                font-size: 16px; 
+                &.goal {
+                    font-size: 17px;
+                }
+            }
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            
+            // --- FIX IS HERE ---
+            // This tells the flex container to center its children (the buttons)
+            align-items: center; 
+            
+            .btn {
+                width: 100%;
+                max-width: 400px; // Stop buttons from being too wide
+                box-sizing: border-box; 
+                text-align: center;
+            }
+        }
+    }
+}
