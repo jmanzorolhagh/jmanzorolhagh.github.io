@@ -28,7 +28,7 @@
     width: 80%;
     max-width: 1000px;
     height: 60%;
-    max-height: 500px;
+    max-height: 550px;
     position: relative; 
     display: flex;
     justify-content: center;
@@ -45,39 +45,31 @@
     height: 100%;
     position: absolute;
 
-    /* ↓↓↓ THIS IS THE CHANGED SECTION ↓↓↓
-    */
     .item-image-container {
       flex: 1;
       min-width: 300px;
       max-width: 350px;
-      background: #f0f0f0; // Fallback for broken images
+      background: #f0f0f0;
 
       .item-image {
         width: 100%;
         height: 100%;
-        
-        // --- THIS IS THE FIX ---
-        // 'contain' will show the whole image, letterboxed
         background-size: contain; 
         background-repeat: no-repeat;
         background-position: center;
       }
       
-      // We can still have the zoom effect,
-      // it just uses 'cover' instead
       &.zoom-image .item-image {
         background-size: cover;
       }
     }
-    /* ↑↑↑ END OF CHANGED SECTION ↑↑↑
-    */
 
     .item-content {
       flex: 2;
       padding: 30px;
       display: flex;
       flex-direction: column;
+      overflow-y: auto; // Allow content to scroll
 
       h3 {
         font-family: $font-serif;
@@ -139,7 +131,6 @@
     }
   }
 
-  // Styles for the navigation arrows
   .nav-arrow {
     position: absolute;
     top: 50%;
@@ -167,7 +158,6 @@
     }
   }
 
-  // Styles for the pagination dots
   .pagination-dots {
     display: flex;
     justify-content: center;
@@ -189,20 +179,60 @@
     }
   }
 
-  // Responsive: on smaller screens, hide the image
-  @media (max-width: 800px) {
-    .slide-item {
-      .item-image-container {
-        display: none; // Hide image on small screens
-      }
-      .item-content {
-        padding: 25px;
-      }
+  // --- THIS IS THE UPDATED MEDIA QUERY ---
+  @media (max-width: 768px) {
+    .header {
+        h2 {
+            font-size: 28px;
+            width: 80%;
+        }
     }
+
+    .slider-container {
+        width: 90%;
+        // --- THIS IS THE FIX ---
+        // Increased from 75% to make the card taller
+        height: 100%; 
+        overflow: hidden;
+    }
+
+    .slide-item {
+        flex-direction: column; 
+        border: 1px solid $columbia-blue-light;
+
+        .item-image-container {
+            max-width: 100%;
+            min-width: 100%;
+            height: 150px; 
+            flex: none; 
+        }
+
+        .item-content {
+            padding: 20px;
+            overflow-y: auto; 
+            flex: 1 1 auto; 
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+
+            h3 { font-size: 20px; }
+            p, li { font-size: 14px; }
+            .tech-stack { font-size: 12px; }
+        }
+    }
+
     .nav-arrow {
-      .MuiSvgIcon-root {
-        font-size: 40px;
-      }
+        top: 75px; 
+        transform: translateY(-50%); 
+        z-index: 20; 
+
+        .MuiSvgIcon-root {
+            font-size: 35px;
+            filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
+        }
+    }
+
+    .pagination-dots {
+        margin-top: 20px;
     }
   }
 }
