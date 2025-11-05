@@ -40,3 +40,23 @@
     }
   }
 }
+
+// --- NEW MEDIA QUERY ---
+@media (max-width: 768px) {
+    .skills {
+        .container {
+            width: 90%;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        .skills-group {
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
