@@ -59,3 +59,23 @@
     }
   }
 }
+
+// --- NEW MEDIA QUERY ---
+@media (max-width: 768px) {
+    .contact {
+        .container {
+            width: 90%;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .links {
+            .contact-link {
+                font-size: 18px;
+            }
+        }
+    }
+}
