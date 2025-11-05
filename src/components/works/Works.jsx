@@ -38,7 +38,7 @@ export default function Works() {
       ],
       tech: "Human-Computer Interaction (HCI), User-Centered Design, Qualitative Analysis",
       img: "./assets/chi26.png", 
-      rep: null, 
+      rep: "https://chi2026.acm.org/", 
       repoText: "Academic Research" 
     },
   
@@ -81,8 +81,8 @@ export default function Works() {
         "System built on a JavaScript backend and a relational SQL database."
       ],
       tech: "React Native, SQL, JavaScript, User-Centered Design",
-      img: "./assets/fitness.webp", // Use a screenshot from your Figma design!
-      rep: null, 
+      img: "./assets/fitness.webp", 
+      rep: "https://github.com/jmanzorolhagh/Tier1Fitness_app", 
       repoText: "Academic Course Project" 
     },
   ];
