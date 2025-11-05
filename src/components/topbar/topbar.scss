@@ -83,4 +83,20 @@
             color: $columbia-white;
         }
     }
+
+    // --- NEW MEDIA QUERY ---
+    @media (max-width: 768px) {
+        .wrapper {
+            padding: 10px 20px; // Tighter padding
+
+            .left {
+                .itemContainer {
+                    display: none; // Hides the text links
+                }
+                .logo {
+                    font-size: 24px; // Slightly smaller logo
+                }
+            }
+        }
+    }
 }
