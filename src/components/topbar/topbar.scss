@@ -12,10 +12,13 @@
     border-bottom: 1px solid $columbia-blue-light;
 
     .wrapper{
-        padding: 25px 30px;
+        padding: 0 30px; 
+        
         display:flex;
         align-items: center;
         justify-content: space-between;
+        height: 100%; 
+        box-sizing: border-box;
         .left{
             display: flex;
             align-items: center;
@@ -91,13 +94,15 @@
         }
         .wrapper {
             padding: 10px 20px; // Tighter padding
+            padding: 10px 20px;
 
             .left {
                 .itemContainer {
                     display: none; // Hides the text links
+                    display: none;
                 }
                 .logo {
-                    font-size: 30px; // Slightly smaller logo
+                    font-size: 26px; // Slightly smaller logo
                 }
             }
         }

@@ -27,7 +27,7 @@ export default function Intro() {
         </p>
         <div className="buttons">
           <a href="#works" className="btn btn-primary">View My Work</a>
-          <a href="public\assets\Joshua Manzorolhagh Resume.docx" download className="btn btn-outline">
+          <a href="/assets/joshua-manzorolhagh-resume.docx" download className="btn btn-outline">
             Download Resume
           </a>
         </div>

@@ -27,9 +27,7 @@
   .slider-container {
     width: 80%;
     max-width: 1000px;
-    
-    // --- THIS IS THE FIX ---
-    // Increased from 60% and 500px
+
     height: 70%;
     max-height: 650px; 
 
@@ -183,7 +181,6 @@
     }
   }
 
-  // --- MOBILE STYLES (UNCHANGED) ---
   @media (max-width: 768px) {
     .header {
         h2 {
@@ -194,8 +191,8 @@
 
     .slider-container {
         width: 90%;
-        height: 85%; 
-        max-height: none; // Unset the max-height
+        height: 85%;
+        max-height: none;
         overflow: hidden;
     }
 
