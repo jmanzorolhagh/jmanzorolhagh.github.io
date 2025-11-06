@@ -17,6 +17,9 @@
     font-family: $font-serif;
     font-size: 42px;
     margin-bottom: 30px;
+    display: inline-block;
+    border-bottom: 3px solid $columbia-white;
+    padding-bottom: 10px;
   }
 
   p {
