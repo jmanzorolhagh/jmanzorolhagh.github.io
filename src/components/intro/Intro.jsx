@@ -7,23 +7,27 @@ export default function Intro() {
         <h1>Joshua Manzorolhagh</h1>
         <h3>Software Engineer & Researcher</h3>
         <p>
-          I am a results-oriented software engineer with over 3 years of professional 
-          experience building tangible, real-world applications, from secure 
-          firmware to full-stack e-commerce platforms. My practical work 
-          transforming abstract concepts into reliable code sparked a desire 
-          for a deeper theoretical understanding of computing.
+          I am a results-oriented software engineer with over 4 years of 
+          experience building simple, accessible, and user-friendly 
+          applications, from secure NFC automation on Windows to BLE 
+          communication to full-stack e-commerce development.
         </p>
         <p>
-          I am currently channeling this focus into undergraduate research in 
-          human-oriented computing at NYIT, where I maintain a 4.0 GPA.
+          As I work towards my professional goals of transforming whiteboard 
+          ideas into tangible code and tools, I aim to gain a deeper, 
+          theoretical grasp of the how and why of engineering as well. 
+          Currently, I am pursuing this focus performing undergraduate 
+          research on human-oriented computing at NYIT as a CHI 2026 
+          representative.
         </p>
         <p className="goal">
-          My goal is to <strong>complement extensive practical expertise with the 
-          advanced theoretical rigor at Columbia University.</strong>
+          My goal is to combine my professional, practical expertise with 
+          the well-rounded theoretical depth and rigor of a 
+          well-rounded Columbia University education.
         </p>
         <div className="buttons">
           <a href="#works" className="btn btn-primary">View My Work</a>
-          <a href="Joshua Manzorolhagh Resume.docx" download className="btn btn-outline">
+          <a href="public\assets\Joshua Manzorolhagh Resume.docx" download className="btn btn-outline">
             Download Resume
           </a>
         </div>
