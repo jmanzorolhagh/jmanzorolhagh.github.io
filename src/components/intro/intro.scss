@@ -62,7 +62,6 @@
   }
 }
 
-// --- THIS MEDIA QUERY IS UPDATED ---
 @media (max-width: 768px) {
     .intro {
         .wrapper {
@@ -85,15 +84,13 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            
-            // --- FIX IS HERE ---
-            // This tells the flex container to center its children (the buttons)
-            align-items: center; 
-            
+
+            align-items: center;
+
             .btn {
                 width: 100%;
-                max-width: 400px; // Stop buttons from being too wide
-                box-sizing: border-box; 
+                max-width: 400px;
+                box-sizing: border-box;
                 text-align: center;
             }
         }
