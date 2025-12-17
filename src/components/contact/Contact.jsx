@@ -6,8 +6,8 @@ export default function Contact() {
       <div className="container">
         <h2>Get In Touch</h2>
         <p>
-          I am actively preparing my application for Columbia GS and am always 
-          open to discussing my work and research. Please feel free to reach out.
+          I am actively pursuing my undergraduate degree at Columbia University and am always 
+          open to discussing my work, opportunities, and research. Please feel free to reach out.
         </p>
         <div className="links">
           <a href="mailto:joshuamanzorolhagh@gmail.com" className="contact-link">

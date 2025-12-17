@@ -16,9 +16,9 @@ export default function Intro() {
           As I work towards my professional goals of transforming whiteboard 
           ideas into tangible code and tools, I aim to gain a deeper, 
           theoretical grasp of the how and why of engineering as well. 
-          Currently, I am pursuing this focus performing undergraduate 
-          research on human-oriented computing at NYIT as a CHI 2026 
-          representative.
+          Currently, I am pursuing this focus while attending Columbia University and performing undergraduate 
+          research on human-oriented computing with Dr. Mamtaj Akter as a CHI 2026 
+          participant.
         </p>
         <p className="goal">
           My goal is to combine my professional, practical expertise with 
