@@ -1,5 +1,5 @@
 import "./topbar.scss"
-import {Email, BusinessCenterOutlined}  from '@mui/icons-material';
+import {Email, GitHub}  from '@mui/icons-material';
 import { motion } from "framer-motion";
 
 export default function Topbar({open, setOpen}) {
@@ -14,9 +14,9 @@ export default function Topbar({open, setOpen}) {
             <span>joshuamanzorolhagh@gmail.com</span>
         </div>
         <div className="itemContainer">
-          <BusinessCenterOutlined className="icon"/>
-          <span> github.com/jmanzorolhagh </span>
-        </div> 
+          <GitHub className="icon"/>
+          <span>github.com/jmanzorolhagh</span>
+        </div>
       </div>
       <div className="right">
         <div className="hamburger" onClick={()=>setOpen(!open)}>
