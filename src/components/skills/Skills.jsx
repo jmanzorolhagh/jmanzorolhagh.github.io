@@ -8,23 +8,27 @@ export default function Skills() {
 
         <div className="skills-group">
           <h3>Languages</h3>
-          <p>C++, C, SQL, Python, Java, JavaScript (ES6+), VBA</p>
+          <p>C/C++, Python, R, SQL, Java, JavaScript, Bash</p>
         </div>
 
         <div className="skills-group">
-          <h3>Frameworks & Hardware</h3>
+          <h3>Systems & Tools</h3>
           <p>
-            Embedded C/C++, ESP32, Bluetooth Low Energy (BLE), ESP-IDF, 
-            STM32CubeIDE, MERN Stack (MongoDB, Express, React, Node.js)
+            Linux/Unix, Git, Make, TCP/IP, Docker, FreeRTOS, ESP-IDF, PlatformIO
           </p>
         </div>
 
         <div className="skills-group">
-          <h3>Databases & Tools</h3>
+          <h3>Data & Statistics</h3>
           <p>
-            Git, Docker, Heroku, Azure, MongoDB (Atlas), MySQL, 
-            Powershell, Visual Basic
+            pandas, NumPy, scikit-learn, statistical modeling,
+            ETL pipelines, relational database design
           </p>
+        </div>
+
+        <div className="skills-group">
+          <h3>Frameworks</h3>
+          <p>Node.js, Express, React, MongoDB, MySQL</p>
         </div>
       </div>
     </section>
