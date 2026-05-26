@@ -14,77 +14,83 @@ export default function Works() {
   const [[slide, direction], setSlide] = useState([0, 0]);
 
   const data = [
-  
+
     {
       id: "1",
-      title: "Venture: ESP32 Secure NFC System",
-      desc: "An independent hardware/software venture to securely execute privileged Powershell scripts on Windows systems.",
+      title: "Options Roll Decision Engine with Embedded Risk Terminal",
+      desc: "In-progress decision-support tool for multi-leg options positions, pairing a Python/C++ analytics core with an independent STM32 hardware kill switch.",
       points: [
-        "Architected a 'vault' system associating NFC Tag IDs with custom scripts.",
-        "Implemented MQTT notifications for real-time mobile alerts."
+        "Reconstructs positions to canonical leg representation and enumerates 50–100 candidate actions (hold/close/roll) per position across strike–expiry grids.",
+        "Computes an EV surface across spot/vol/time scenarios with leg-by-leg bid–ask and ADV-scaled liquidity penalties.",
+        "Applies split-conformal calibration on historical forecast errors for distribution-free, downside-adjusted bounds; ranks actions by lower-bound EV vs. the null action.",
+        "STM32 kill switch (UART-only) maintains P&L state, gates order submission via permission queries, and fails closed on host crash or link loss — requires a physical button to clear trips."
       ],
-      tech: "ESP32, Embedded C++, Powershell, MQTT",
-      img: "./assets/esp32-1.png",
-      rep: "https://github.com/jmanzorolhagh" 
+      tech: "Python, C++, STM32, Conformal Prediction, Options Pricing, Embedded Systems",
+      img: "./assets/options_pl.png",
+      imgClass: "light-bg",
+      rep: "https://github.com/jmanzorolhagh",
+      repoText: "In Progress"
     },
-  
+
     {
       id: "2",
-      title: "ACM CHI Student Research Competition",
-      desc: "Selected by Professor Mamtaj Akter to represent NYIT in the premier international conference for Human-Computer Interaction (HCI).",
+      title: "Junior Embedded & QA Engineer — goTenna",
+      desc: "Developed and debugged C/C++ firmware for mesh networking devices under real-time constraints, working with BLE and WiFi at the register and packet level.",
       points: [
-        "Conducting user-centered research, including interviewing abuse victims, to analyze app-based spyware detection.",
-        "Designing a human-centered mobile security application based on qualitative analysis."
+        "Reverse-engineered proprietary BLE hex message formats to decode command sequences triggering device firmware functions.",
+        "Built device-to-mobile communication interfaces for command and telemetry.",
+        "Automated CI/CD pipelines for embedded test cycles."
       ],
-      tech: "Human-Computer Interaction (HCI), User-Centered Design, Qualitative Analysis",
-      img: "./assets/chi26.png", 
-      rep: "https://chi2026.acm.org/", 
-      repoText: "Academic Research" 
+      tech: "Embedded C/C++, BLE, WiFi, Reverse Engineering, CI/CD",
+      img: "./assets/ble.png",
+      imgClass: "zoom-image",
+      rep: null,
+      repoText: "Private"
     },
-  
+
     {
       id: "3",
-      title: "Firmware & BLE Engineer (goTenna)",
-      desc: "Served as a key engineer bridging hardware and software for goTenna's mesh networking devices.",
+      title: "Infrastructure & Data Engineer — Columbia CTV",
+      desc: "Migrating legacy data from SharePoint and unstructured lists into normalized relational schemas in Dataverse.",
       points: [
-        "Developed and debugged firmware for BLE and WiFi protocols.",
-        "Transformed abstract requirements into functional, physical products."
+        "Designing schemas covering users, projects, collaborators, and document records across thousands of legacy entries.",
+        "Building cleaning, validation, and transformation pipelines that enforce referential integrity end-to-end.",
+        "Developing the frontend interface for structured data access and supporting network infrastructure and IT operations."
       ],
-      tech: "Embedded C/C++, Bluetooth Low Energy (BLE), ESP-IDF",
-      img: "./assets/ble.png",
-      imgClass: "zoom-image", 
-      rep: null, 
-      repoText: "Private" 
+      tech: "Dataverse, SQL, ETL Pipelines, Data Modeling, Relational Schemas",
+      img: "./assets/ctv.png",
+      rep: null,
+      repoText: "Internal Project"
     },
 
     {
       id: "4",
-      title: "Backend Engineer (J&H Corp)",
-      desc: "Engineered and maintained RESTful APIs for all core functions of a productive e-commerce platform.",
+      title: "NFC KeyVault — Tap-to-Run Windows Automation",
+      desc: "Independent hardware/software venture: tap an NFC tag to launch any Windows script or program — one-tap dev environment setup, workspace launches, and routine workflows.",
       points: [
-        "Designed APIs for product listings, cart management, and secure checkouts.",
-        "Collaborated with frontend teams using the MERN stack."
+        "ESP32 firmware in C polls a PN532 reader over UART and reports tag UIDs to the host.",
+        "A .NET Windows service authenticates UIDs against a hot-reloaded JSON vault and dispatches scripts across Windows session boundaries.",
+        "Full deployment pipeline included for installation, service registration, and updates."
       ],
-      tech: "Node.js, Express, MongoDB, RESTful APIs, MERN Stack",
-      img: "./assets/mern.webp",
-      
-      rep: null, 
-      repoText: "Private" 
+      tech: "ESP32, C, C#/.NET, PowerShell, PN532, UART",
+      img: "./assets/esp32-1.png",
+      rep: "https://github.com/jmanzorolhagh"
     },
+
     {
       id: "5",
-      title: "Tier1Fitness (NYIT Course Project)",
-      desc: "A social fitness community platform, app and designed to gamify exercise and foster community-driven accountability.",
+      title: "Junior Backend Engineer — J&H Corp",
+      desc: "Designed and maintained RESTful APIs powering core e-commerce functions: product catalog, cart management, and checkout.",
       points: [
-        "Serving as Infrastructure Lead on the full-stack team, developing the app in React Native.",
-        "Designing a social feed for users to share progress and join custom fitness challenges.",
-        "System built on a JavaScript backend and a relational SQL database."
+        "Built backend services in Node.js, Express, and MongoDB.",
+        "Collaborated with frontend and infrastructure teams on deployment and integration."
       ],
-      tech: "React Native, SQL, JavaScript, User-Centered Design",
-      img: "./assets/fitness.webp", 
-      rep: "https://github.com/jmanzorolhagh/Tier1Fitness_app", 
-      repoText: "Academic Course Project" 
+      tech: "Node.js, Express, MongoDB, RESTful APIs",
+      img: "./assets/mern.webp",
+      rep: null,
+      repoText: "Private"
     },
+
   ];
 
   const paginate = (newDirection) => {
@@ -102,7 +108,7 @@ export default function Works() {
   return (
     <div className="Works" id="works">
       <div className="header">
-        <h2>Professional Work & Research</h2>
+        <h2>Professional Work</h2>
       </div>
 
       <div className="slider-container">
