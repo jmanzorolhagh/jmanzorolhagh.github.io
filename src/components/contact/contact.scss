@@ -14,7 +14,6 @@
   }
 
   h2 {
-    font-family: $font-serif;
     font-size: 42px;
     margin-bottom: 30px;
     display: inline-block;
@@ -23,7 +22,6 @@
   }
 
   p {
-    font-family: $font-sans;
     font-size: 19px;
     line-height: 1.7;
     margin-bottom: 40px;
@@ -36,7 +34,6 @@
     gap: 20px;
 
     .contact-link {
-      font-family: $font-sans;
       font-size: 20px;
       font-weight: 700;
       color: $columbia-white;

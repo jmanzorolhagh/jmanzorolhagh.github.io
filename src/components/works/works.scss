@@ -15,7 +15,6 @@
     text-align: center;
     margin-bottom: 30px;
     h2 {
-      font-family: $font-serif;
       font-size: 42px;
       color: $columbia-blue-dark;
       border-bottom: 3px solid $columbia-blue-dark;
@@ -64,6 +63,10 @@
       &.zoom-image .item-image {
         background-size: cover;
       }
+
+      &.light-bg {
+        background: $columbia-white;
+      }
     }
 
     .item-content {
@@ -74,7 +77,6 @@
       overflow-y: auto; // Allow content to scroll if it's *still* too big
 
       h3 {
-        font-family: $font-serif;
         font-size: 24px;
         color: $columbia-blue-dark;
         margin-top: 0;
@@ -100,7 +102,6 @@
       }
 
       .tech-stack {
-        font-family: $font-sans;
         font-size: 14px;
         font-weight: 700;
         color: $columbia-blue-dark;
@@ -123,7 +124,6 @@
         }
 
         .repo-private {
-          font-family: $font-sans;
           font-size: 14px;
           font-weight: 700;
           color: #777;
