@@ -13,5 +13,12 @@ $columbia-white: #FFFFFF;
 $columbia-text-dark: #1C1C1C; 
 
 
-$font-serif: 'Garamond', 'Times New Roman', serif;
-$font-sans: 'Lato', 'Open Sans', sans-serif;
+// Two-role type system.
+// Primary: used everywhere by default (set once on body, inherited).
+// Highlight: reserved for h1, h2, and the logo wordmark — keep it rare.
+$font-primary: 'Lato', 'Open Sans', sans-serif;
+$font-highlight: 'EB Garamond', 'Garamond', 'Times New Roman', serif;
+
+// Backwards-compatible aliases — prefer $font-primary / $font-highlight above.
+$font-sans: $font-primary;
+$font-serif: $font-highlight;
