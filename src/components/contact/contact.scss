@@ -1,80 +1,90 @@
 @import "../../_variables";
 
 .contact {
-  background-color: $columbia-blue-dark;
+  position: relative;
+  padding: 112px 6vw 120px;
+  overflow: hidden;
+  background: #102f56;
   color: $columbia-white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 85% 20%, rgba(108, 172, 228, 0.24), transparent 22rem),
+      linear-gradient(115deg, transparent 0 64%, rgba(255, 255, 255, 0.025) 64% 65%, transparent 65%);
+    pointer-events: none;
+  }
 
   .container {
-    width: 60%;
-    max-width: 700px;
+    position: relative;
+    z-index: 1;
+    width: min(900px, 100%);
+    margin: 0 auto;
   }
 
   h2 {
-    font-size: 42px;
-    margin-bottom: 30px;
-    display: inline-block;
-    border-bottom: 3px solid $columbia-white;
-    padding-bottom: 10px;
+    margin: 0 0 28px;
+    font-size: clamp(46px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.03em;
   }
 
   p {
-    font-size: 19px;
-    line-height: 1.7;
-    margin-bottom: 40px;
+    max-width: 780px;
+    margin: 0 0 42px;
+    color: #dbeaf3;
+    font-size: clamp(18px, 2vw, 21px);
+    line-height: 1.75;
   }
 
   .links {
     display: flex;
-    flex-direction: column;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    min-height: 48px;
+    padding: 0 22px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
     align-items: center;
-    gap: 20px;
+    color: $columbia-white;
+    font-family: $font-mono;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 
-    .contact-link {
-      font-size: 20px;
-      font-weight: 700;
-      color: $columbia-white;
-      text-decoration: none;
-      position: relative;
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
 
-      &::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 2px;
-        background: $columbia-blue-light;
-        transition: width 0.3s;
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
+    &:focus-visible {
+      outline: 3px solid $columbia-blue-light;
+      outline-offset: 4px;
     }
   }
 }
 
-@media (max-width: 768px) {
-    .contact {
-        .container {
-            width: 90%;
-        }
-        h2 {
-            font-size: 32px;
-        }
-        p {
-            font-size: 20px;
-        }
-        .links {
-            .contact-link {
-                font-size: 22px;
-            }
-        }
+@media (max-width: 640px) {
+  .contact {
+    padding: 82px 20px 90px;
+
+    .links {
+      display: grid;
     }
+
+    .contact-link {
+      justify-content: center;
+      overflow-wrap: anywhere;
+      text-align: center;
+    }
+  }
 }

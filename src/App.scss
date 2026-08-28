@@ -1,61 +1,89 @@
 @import 'variables';
 
-.app{
-    height: 100vh;
-    background-color: $columbia-white;
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 4%, rgba(185, 217, 235, 0.5), transparent 28rem),
+    $columbia-white;
 
-    .sections{
-        width: 100%;
-        height: calc(100vh - 70px);
-        position: relative;
-        top: 70px;
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-        scrollbar-width: none; //for firefox
-        &::-webkit-scrollbar{
-            display: none;
-        }
-        > *{
-            width: 100vw;
-            height: calc(100vh - 70px);
-            scroll-snap-align: start;
+  .sections {
+    width: 100%;
+    padding-top: 70px;
 
-            box-sizing: border-box; 
-        }
+    > * {
+      width: 100%;
+      box-sizing: border-box;
+      scroll-margin-top: 70px;
     }
+  }
 }
 
-// Global Button Styles
 .btn {
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 16px;
+  display: inline-flex;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.02em;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease;
-  margin: 0 10px;
+  transition: transform 180ms ease, box-shadow 180ms ease,
+    background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba(0, 119, 200, 0.3);
+    outline-offset: 4px;
+  }
 
   &.btn-primary {
-    background-color: $columbia-blue-accent;
+    background-color: $columbia-blue-dark;
     color: $columbia-white;
-    border: 2px solid $columbia-blue-accent;
+    box-shadow: 0 12px 28px rgba(29, 79, 145, 0.22);
 
     &:hover {
-      background-color: $columbia-blue-dark;
-      border-color: $columbia-blue-dark;
+      background-color: $columbia-blue-accent;
+      box-shadow: 0 16px 32px rgba(29, 79, 145, 0.28);
     }
   }
 
   &.btn-outline {
-    background-color: $columbia-white;
+    background-color: rgba(255, 255, 255, 0.72);
     color: $columbia-blue-dark;
-    border: 2px solid $columbia-blue-dark;
+    border-color: rgba(29, 79, 145, 0.45);
 
     &:hover {
-      background-color: $columbia-blue-dark;
-      color: $columbia-white;
+      background-color: $columbia-white;
+      border-color: $columbia-blue-dark;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .app .sections {
+    padding-top: 62px;
+
+    > * {
+      scroll-margin-top: 62px;
     }
   }
 }

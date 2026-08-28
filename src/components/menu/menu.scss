@@ -1,47 +1,74 @@
 @import "../../_variables";
 
-.menu{
-    opacity: 0;
-    width: 100vw;
-    height: 100vh;
-    backdrop-filter: blur(6px);
-    background-color: rgba(29, 79, 145, 0.9); // Dark blue overlay
-    position:fixed;
-    top: 0;
-    left: -100vw; // Start off-screen
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.4s ease, left 0s 0.4s linear;
-    
-    ul{
-        padding: 0;
-        margin: 0;
-        li{
-            font-size: 40px;
-            margin: 30px;
-            list-style: none;
-            text-align: center;
-            a{
-                text-decoration: none;
-                color: $columbia-white;
-                font-weight: 700;
-                transition: all 0.3s ease;
-            }
-            &:hover {
-                a {
-                    color: $columbia-blue-light;
-                    letter-spacing: 1px;
-                }
-            }
-        }
+.menu {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  padding-top: 70px;
+  background:
+    linear-gradient(rgba(29, 79, 145, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 79, 145, 0.08) 1px, transparent 1px),
+    rgba(17, 54, 102, 0.97);
+  background-size: 42px 42px, 42px 42px, auto;
+  place-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: opacity 240ms ease, transform 240ms ease, visibility 240ms ease;
+
+  ul {
+    display: grid;
+    margin: 0;
+    padding: 30px;
+    gap: 16px;
+    list-style: none;
+    text-align: center;
+  }
+
+  li {
+    overflow: hidden;
+  }
+
+  a {
+    display: inline-block;
+    padding: 8px 18px;
+    color: $columbia-white;
+    font-family: $font-highlight;
+    font-size: clamp(38px, 7vw, 72px);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 160ms ease, transform 160ms ease;
+
+    &:hover {
+      color: $columbia-blue-light;
+      transform: translateX(8px);
     }
-    
-    &.active{
-        left: 0; // Bring on-screen
-        opacity: 1;
-        transition: opacity 0.4s ease;
+
+    &:focus-visible {
+      outline: 3px solid $columbia-blue-light;
+      outline-offset: 4px;
     }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding-top: 62px;
+
+    ul {
+      gap: 22px;
+    }
+
+    a {
+      font-size: clamp(38px, 12vw, 54px);
+    }
+  }
 }

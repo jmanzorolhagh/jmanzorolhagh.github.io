@@ -1,95 +1,226 @@
 @import "../../_variables";
 
 .intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $columbia-white;
-  color: $columbia-text-dark;
+  position: relative;
+  min-height: calc(100vh - 70px);
+  padding: 88px 6vw 96px;
   overflow: hidden;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.98), rgba(241, 249, 253, 0.92)),
+    $columbia-white;
+  color: $columbia-text-dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(29, 79, 145, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(29, 79, 145, 0.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: linear-gradient(to right, transparent 8%, black 70%, black 100%);
+  }
+
+  .intro-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.75fr);
+    gap: clamp(48px, 8vw, 110px);
+    align-items: center;
+  }
 
   .wrapper {
-    width: 70%;
-    max-width: 900px;
-    text-align: left;
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease 0.5s forwards;
+    transform: translateY(18px);
+    animation: introFade 700ms ease 180ms forwards;
 
     h1 {
-      font-size: 48px;
-      font-weight: 700;
+      max-width: 780px;
+      margin: 0 0 10px;
       color: $columbia-blue-dark;
-      margin-bottom: 10px;
+      font-size: clamp(48px, 6vw, 78px);
+      font-weight: 700;
+      line-height: 0.98;
+      letter-spacing: -0.035em;
     }
 
     h3 {
-      font-size: 28px;
-      font-weight: 400;
-      margin-bottom: 25px;
-      color: $columbia-text-dark;
+      max-width: 780px;
+      margin: 0 0 30px;
+      color: $columbia-blue-accent;
+      font-family: $font-mono;
+      font-size: clamp(15px, 1.7vw, 20px);
+      font-weight: 500;
+      line-height: 1.5;
     }
 
     p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      max-width: 760px;
+      margin: 0 0 18px;
+      color: #263849;
+      font-size: clamp(16px, 1.45vw, 18px);
+      line-height: 1.72;
 
       &.goal {
-        font-size: 19px;
-        font-weight: 700;
+        margin-top: 26px;
+        padding-left: 20px;
+        border-left: 3px solid $columbia-blue-accent;
         color: $columbia-blue-dark;
+        font-weight: 700;
       }
     }
   }
 
   .buttons {
-    margin-top: 30px;
+    display: flex;
+    margin-top: 34px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .signal-visual {
+    position: relative;
+    min-height: 460px;
+    border: 1px solid rgba(29, 79, 145, 0.13);
+    border-radius: 28px;
+    overflow: hidden;
+    background:
+      linear-gradient(rgba(29, 79, 145, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(29, 79, 145, 0.06) 1px, transparent 1px),
+      linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(185, 217, 235, 0.44));
+    background-size: 32px 32px, 32px 32px, auto;
+    box-shadow: 0 30px 80px rgba(29, 79, 145, 0.15);
+    transform: rotate(1.5deg);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    &::before {
+      width: 220px;
+      height: 220px;
+      top: -70px;
+      right: -50px;
+      border: 1px solid rgba(0, 119, 200, 0.22);
+      box-shadow:
+        0 0 0 32px rgba(0, 119, 200, 0.045),
+        0 0 0 64px rgba(0, 119, 200, 0.025);
+    }
+
+    &::after {
+      width: 10px;
+      height: 10px;
+      left: 50%;
+      bottom: 46px;
+      background: #e76f51;
+      box-shadow:
+        -105px -40px 0 #0077c8,
+        -62px -86px 0 #6cace4,
+        46px -124px 0 #e9c46a,
+        102px -190px 0 #0077c8,
+        30px -260px 0 #1d4f91;
+    }
+  }
+
+  .signal-band,
+  .signal-trace {
+    position: absolute;
+    inset: 74px 30px 54px;
+    clip-path: polygon(0 72%, 14% 62%, 27% 67%, 40% 45%, 53% 52%, 66% 29%, 80% 38%, 100% 12%, 100% 34%, 81% 54%, 67% 45%, 54% 67%, 40% 60%, 28% 82%, 13% 76%, 0 90%);
+  }
+
+  .signal-band {
+    background: rgba(0, 119, 200, 0.13);
+  }
+
+  .signal-trace {
+    inset: 90px 30px 70px;
+    background: $columbia-blue-dark;
+    clip-path: polygon(0 74%, 14% 64%, 27% 69%, 40% 47%, 53% 54%, 66% 31%, 80% 40%, 100% 14%, 100% 15.5%, 80% 42%, 66% 33%, 53% 56%, 40% 49%, 27% 71%, 14% 66%, 0 76%);
+  }
+
+  .signal-points span {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border: 2px solid $columbia-white;
+    border-radius: 50%;
+    background: $columbia-blue-accent;
+    box-shadow: 0 2px 8px rgba(29, 79, 145, 0.25);
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        left: calc(8% + #{($i - 1) * 7.4%});
+        top: calc(70% - #{(($i * 17) % 48)} * 1%);
+      }
+    }
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+@keyframes introFade {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@media (max-width: 768px) {
-    .intro {
-        .wrapper {
-            width: 90%; 
-
-            h1 {
-                font-size: 32px; 
-            }
-            h3 {
-                font-size: 22px; 
-            }
-            p {
-                font-size: 16px; 
-                &.goal {
-                    font-size: 17px;
-                }
-            }
-        }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-
-            align-items: center;
-
-            .btn {
-                width: 100%;
-                max-width: 400px;
-                box-sizing: border-box;
-                text-align: center;
-            }
-        }
+@media (max-width: 960px) {
+  .intro {
+    .intro-grid {
+      grid-template-columns: 1fr;
     }
+
+    .signal-visual {
+      min-height: 260px;
+      order: -1;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .intro {
+    min-height: auto;
+    padding: 64px 20px 72px;
+
+    &::before {
+      background-size: 28px 28px;
+    }
+
+    .intro-grid {
+      gap: 38px;
+    }
+
+    .signal-visual {
+      display: none;
+    }
+
+    .wrapper {
+      h1 {
+        font-size: clamp(42px, 14vw, 58px);
+      }
+
+      h3 {
+        margin-bottom: 24px;
+      }
+
+      p.goal {
+        padding-left: 16px;
+      }
+    }
+
+    .buttons {
+      display: grid;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
 }

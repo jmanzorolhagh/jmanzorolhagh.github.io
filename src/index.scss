@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Lato:wght@300;400;700;900&display=swap');
+@import 'variables';
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Lato:wght@300;400;700&display=swap');
-@import 'variables'; 
+html {
+  scroll-behavior: smooth;
+  background-color: $columbia-white;
+}
 
 body {
   margin: 0;
@@ -8,9 +12,24 @@ body {
   background-color: $columbia-white;
   color: $columbia-text-dark;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-// Highlight role: section titles and display headings only.
-h1, h2 {
+body.menu-open {
+  overflow: hidden;
+}
+
+::selection {
+  color: $columbia-blue-dark;
+  background: rgba(185, 217, 235, 0.9);
+}
+
+h1,
+h2 {
   font-family: $font-highlight;
+}
+
+a {
+  color: inherit;
 }

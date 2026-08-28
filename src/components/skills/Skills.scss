@@ -1,58 +1,81 @@
 @import "../../_variables";
 
 .skills {
-  background-color: $columbia-white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  padding: 104px 6vw 112px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(185, 217, 235, 0.72), transparent 24rem),
+    $columbia-white;
 
   .container {
-    width: 70%;
-    max-width: 900px;
-    text-align: left;
+    display: grid;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
   }
 
   h2 {
-    font-size: 42px;
+    margin: 0 0 32px;
     color: $columbia-blue-dark;
-    margin-bottom: 40px;
-    border-bottom: 3px solid $columbia-blue-light;
-    padding-bottom: 10px;
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    grid-column: 1 / -1;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 76px;
+      height: 4px;
+      margin-top: 18px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, $columbia-blue-accent, #e9c46a);
+    }
   }
 
   .skills-group {
-    margin-bottom: 30px;
+    min-width: 0;
+    padding: 28px 30px;
+    border: 1px solid rgba(29, 79, 145, 0.12);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 14px 36px rgba(29, 79, 145, 0.06);
 
     h3 {
-      font-size: 24px;
-      font-weight: 700;
+      margin: 0 0 14px;
       color: $columbia-blue-dark;
-      margin-bottom: 10px;
+      font-family: $font-mono;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
     p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: $columbia-text-dark;
+      margin: 0;
+      color: #31475b;
+      font-size: 17px;
+      line-height: 1.75;
     }
   }
 }
 
-@media (max-width: 768px) {
-    .skills {
-        .container {
-            width: 90%;
-        }
-        h2 {
-            font-size: 32px;
-        }
-        .skills-group {
-            h3 {
-                font-size: 24px;
-            }
-            p {
-                font-size: 20px;
-            }
-        }
+@media (max-width: 720px) {
+  .skills {
+    padding: 78px 20px 84px;
+
+    .container {
+      grid-template-columns: 1fr;
     }
+
+    h2 {
+      grid-column: auto;
+    }
+
+    .skills-group {
+      padding: 24px;
+    }
+  }
 }

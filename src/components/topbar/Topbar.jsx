@@ -4,27 +4,33 @@ import { motion } from "framer-motion";
 
 export default function Topbar({open, setOpen}) {
   return( 
-  <div className={'Topbar ' + (open && 'active')} id="topbar">
+  <header className={open ? "Topbar active" : "Topbar"} id="topbar">
     <div className="wrapper">
       <div className="left">
         <motion.a href="#intro" className="logo" initial={{x: -100}} animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 100 }}>jrm</motion.a>
-        <div className="itemContainer">
+        <a href="mailto:joshuamanzorolhagh@gmail.com" className="itemContainer">
           <Email className="icon"/>
-            <span>joshuamanzorolhagh@gmail.com</span>
-        </div>
-        <div className="itemContainer">
+          <span>joshuamanzorolhagh@gmail.com</span>
+        </a>
+        <a href="https://github.com/jmanzorolhagh" target="_blank" rel="noopener noreferrer" className="itemContainer">
           <GitHub className="icon"/>
           <span>github.com/jmanzorolhagh</span>
-        </div>
+        </a>
       </div>
       <div className="right">
-        <div className="hamburger" onClick={()=>setOpen(!open)}>
+        <button
+          type="button"
+          className="hamburger"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+        >
           <span className="line1"></span>
           <span className="line2"></span>
           <span className="line3"></span>
-        </div>
+        </button>
       </div>
     </div>
-  </div>);
+  </header>);
 }

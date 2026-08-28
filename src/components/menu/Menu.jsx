@@ -1,7 +1,13 @@
 import "./menu.scss"
+import { useEffect } from "react";
 
 export default function Menu({open, setOpen}) {
-  return <div className={"menu " + (open && 'active')}>
+  useEffect(() => {
+      document.body.classList.toggle("menu-open", open);
+      return () => document.body.classList.remove("menu-open");
+  }, [open]);
+
+  return <nav className={open ? "menu active" : "menu"} aria-hidden={!open}>
       <ul>
           <li onClick={() => setOpen(false)}>
               <a href="#intro">Intro</a>
@@ -19,5 +25,5 @@ export default function Menu({open, setOpen}) {
               <a href="#contact">Contact</a>
           </li>
       </ul>
-  </div>;
+  </nav>;
 }

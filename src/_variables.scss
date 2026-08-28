@@ -18,6 +18,7 @@ $columbia-text-dark: #1C1C1C;
 // Highlight: reserved for h1, h2, and the logo wordmark — keep it rare.
 $font-primary: 'Lato', 'Open Sans', sans-serif;
 $font-highlight: 'EB Garamond', 'Garamond', 'Times New Roman', serif;
+$font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
 
 // Backwards-compatible aliases — prefer $font-primary / $font-highlight above.
 $font-sans: $font-primary;

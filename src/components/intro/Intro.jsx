@@ -3,7 +3,8 @@ import "./intro.scss";
 export default function Intro() {
   return (
     <section className="intro" id="intro">
-      <div className="wrapper">
+      <div className="intro-grid">
+        <div className="wrapper">
         <h1>Joshua Manzorolhagh</h1>
         <h3>Mathematics-Statistics @ Columbia | C++/Python &amp; Real-Time Systems</h3>
         <p>
@@ -24,11 +25,20 @@ export default function Intro() {
           forecasting, risk management, and performance modeling. PLease reach out with any
           research collaborations and engineering opportunities in these areas!
         </p>
-        <div className="buttons">
-          <a href="#works" className="btn btn-primary">View My Work</a>
-          <a href="/assets/joshua-manzorolhagh-resume.docx" download className="btn btn-outline">
-            Download Resume
-          </a>
+          <div className="buttons">
+            <a href="#works" className="btn btn-primary">View My Work</a>
+            <a href="/assets/joshua-manzorolhagh-resume.docx" download className="btn btn-outline">
+              Download Resume
+            </a>
+          </div>
+        </div>
+
+        <div className="signal-visual" aria-hidden="true">
+          <div className="signal-band"></div>
+          <div className="signal-trace"></div>
+          <div className="signal-points">
+            {Array.from({ length: 12 }, (_, index) => <span key={index}></span>)}
+          </div>
         </div>
       </div>
     </section>
