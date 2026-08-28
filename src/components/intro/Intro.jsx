@@ -13,7 +13,7 @@ export default function Intro() {
           My core strengths are in C/C++, Python, and statistical computing.
         </p>
         <p>
-          I build systems at the intersection of statistical modeling and
+          I build systems with strong consideration of statistical modeling and
           performance-oriented software. My current project, Citi Bike Balancr,
           combines live station feeds with historical trip data to forecast
           short-term depletion and overflow risk and support real-time
@@ -21,8 +21,8 @@ export default function Intro() {
         </p>
         <p className="goal">
           I am especially interested in low-latency systems, short-horizon
-          forecasting, risk management, and performance modeling, and I am open
-          to research collaborations and engineering opportunities in these areas.
+          forecasting, risk management, and performance modeling. PLease reach out with any
+          research collaborations and engineering opportunities in these areas!
         </p>
         <div className="buttons">
           <a href="#works" className="btn btn-primary">View My Work</a>
