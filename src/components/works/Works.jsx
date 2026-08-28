@@ -16,24 +16,23 @@ export default function Works() {
   const data = [
 
     {
-      id: "1",
-      title: "Options Roll Decision Engine with Embedded Risk Terminal",
-      desc: "In-progress decision-support tool for multi-leg options positions, pairing a Python/C++ analytics core with an independent STM32 hardware kill switch.",
+      id: "2",
+      title: "Citi Bike Balancr — Real-Time Mobility Forecasting",
+      desc: "In-progress forecasting and decision-support system for Citi Bike rebalancing across New York City.",
       points: [
-        "Reconstructs positions to canonical leg representation and enumerates 50–100 candidate actions (hold/close/roll) per position across strike–expiry grids.",
-        "Computes an EV surface across spot/vol/time scenarios with leg-by-leg bid–ask and ADV-scaled liquidity penalties.",
-        "Applies split-conformal calibration on historical forecast errors for distribution-free, downside-adjusted bounds; ranks actions by lower-bound EV vs. the null action.",
-        "STM32 kill switch (UART-only) maintains P&L state, gates order submission via permission queries, and fails closed on host crash or link loss — requires a physical button to clear trips."
+        "Building a data pipeline that combines live Citi Bike station-status feeds with historical trip data to model short-term station depletion and overflow risk.",
+        "Developing probabilistic demand forecasts and split-conformal uncertainty intervals to identify high-risk stations and prioritize rebalancing under operational constraints.",
+        "Architecting a Python modeling workflow with a performance-oriented C++ inference layer; evaluating temporal and weather features through backtesting and ablation studies."
       ],
-      tech: "Python, C++, STM32, Conformal Prediction, Options Pricing, Embedded Systems",
-      img: "./assets/options_pl.png",
+      tech: "Python, C++, pandas, scikit-learn, GBFS, Conformal Prediction",
+      img: "./assets/citibike.png",
       imgClass: "light-bg",
-      rep: "https://github.com/jmanzorolhagh",
+      rep: null,
       repoText: "In Progress"
     },
 
     {
-      id: "2",
+      id: "3",
       title: "Junior Embedded & QA Engineer — goTenna",
       desc: "Developed and debugged C/C++ firmware for mesh networking devices under real-time constraints, working with BLE and WiFi at the register and packet level.",
       points: [
@@ -49,7 +48,7 @@ export default function Works() {
     },
 
     {
-      id: "3",
+      id: "1",
       title: "Infrastructure & Data Engineer — Columbia CTV",
       desc: "Migrating legacy data from SharePoint and unstructured lists into normalized relational schemas in Dataverse.",
       points: [
@@ -108,7 +107,7 @@ export default function Works() {
   return (
     <div className="Works" id="works">
       <div className="header">
-        <h2>Professional Work</h2>
+        <h2>Selected Work</h2>
       </div>
 
       <div className="slider-container">

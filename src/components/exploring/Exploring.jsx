@@ -4,36 +4,35 @@ export default function Exploring() {
   return (
     <section className="exploring" id="exploring">
       <div className="container">
-        <h2>Currently Exploring</h2>
+        <h2>Research &amp; Engineering Interests</h2>
         <p className="lead">
           Topics I'm actively reading, implementing, or building.
         </p>
 
         <div className="exploring-group">
-          <h3>Conformal Risk Control</h3>
+          <h3>Online Forecasting &amp; Uncertainty</h3>
           <p>
-            Distribution-free uncertainty quantification. Split and
-            adaptive conformal prediction; conformal risk control for bounded
-            loss functions. Especially in applying these to options forecasts to
-            create distribution free bounds.
+            Short-horizon demand forecasting, split and adaptive conformal
+            prediction, and distribution-free uncertainty estimates for
+            decisions made from changing, real-world data.
           </p>
         </div>
 
         <div className="exploring-group">
-          <h3>Market Microstructure & Options</h3>
+          <h3>Real-Time Decision Systems</h3>
           <p>
-            Order book dynamics, bid-ask and liquidity modeling for multi-leg
-            options, and how transaction costs and ADV constraints shape what
-            a roll decision engine should actually recommend.
+            Streaming data pipelines, risk-aware decision rules, and the
+            engineering required to turn statistical forecasts into reliable
+            operational recommendations.
           </p>
         </div>
 
         <div className="exploring-group">
-          <h3>Low-Latency Systems</h3>
+          <h3>Performance-Oriented C++</h3>
           <p>
-            Modern C++ for hot-path code, lock-free data structures, kernel
-            bypass networking, and the systems engineering practices that
-            separate research code from code that runs in production trading.
+            Modern C++ for latency-sensitive code, efficient inference,
+            concurrency, and the systems practices that separate research
+            prototypes from dependable production software.
           </p>
         </div>
       </div>
