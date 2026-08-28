@@ -22,7 +22,7 @@ export default function Intro() {
         </p>
         <p className="goal">
           I am especially interested in low-latency systems, short-horizon
-          forecasting, risk management, and performance modeling. PLease reach out with any
+          forecasting, risk management, and performance modeling. Please reach out with any
           research collaborations and engineering opportunities in these areas!
         </p>
           <div className="buttons">

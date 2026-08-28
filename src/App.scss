@@ -1,19 +1,31 @@
 @import 'variables';
 
 .app {
-  min-height: 100vh;
+  height: 100svh;
+  overflow: hidden;
   background:
     radial-gradient(circle at 8% 4%, rgba(185, 217, 235, 0.5), transparent 28rem),
     $columbia-white;
 
   .sections {
     width: 100%;
-    padding-top: 70px;
+    height: calc(100svh - 70px);
+    position: relative;
+    top: 70px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(29, 79, 145, 0.3) transparent;
 
     > * {
       width: 100%;
+      min-height: calc(100svh - 70px);
       box-sizing: border-box;
-      scroll-margin-top: 70px;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
     }
   }
 }
@@ -80,10 +92,11 @@
 
 @media (max-width: 768px) {
   .app .sections {
-    padding-top: 62px;
+    height: calc(100svh - 62px);
+    top: 62px;
 
     > * {
-      scroll-margin-top: 62px;
+      min-height: calc(100svh - 62px);
     }
   }
 }
